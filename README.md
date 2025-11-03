@@ -42,27 +42,7 @@ streamlit run app.py
 
 The app will open in your default browser and allow you to change sidebar inputs and see the recommended crop.
 
-## Deploy to Streamlit Cloud (fast)
-1. Create a GitHub repo and push the project (include `app.py`, `requirements.txt`, and `Crop_recommendation.csv`).
-2. Sign into https://streamlit.io/cloud and link your GitHub repo.
-3. Pick the branch and the `app.py` file; Streamlit Cloud will install the dependencies and run the app.
 
-If Streamlit Cloud fails to install packages, check the install logs there — often the fix is the same: upgrade pip or switch to a different Python runtime (Streamlit Cloud lets you change the Python version in Advanced settings).
-
-## Troubleshooting
-- If `pip install` fails with compilation errors, try:
-
-```cmd
-pip install --upgrade pip setuptools wheel
-pip install --upgrade streamlit
-```
-
-- If problems persist, create a fresh virtual environment and retry, or use conda.
-
-## Next steps / Improvements
-- Persist the trained model to disk (`joblib.dump`) so the app doesn't retrain every cold-start.
-- Add explainability (SHAP) to show why a crop was recommended.
-- Add unit tests for prediction pipeline.
 
 If you want, I can:
 - Push these files to a new GitHub repo for you (you'll have to provide credentials or do the final push),
